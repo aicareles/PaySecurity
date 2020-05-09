@@ -1,4 +1,4 @@
-package com.taobao.paysecurity
+package com.taobao.travel
 
 import org.junit.Test
 

@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 29
     defaultConfig {
-        applicationId "com.taobao.paysecurity"
+        applicationId "com.alipay.iphoneclient"
         minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
@@ -18,6 +18,11 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "安全插件-v${defaultConfig.versionName}.apk"
         }
     }
 }

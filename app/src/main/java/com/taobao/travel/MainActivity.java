@@ -1,4 +1,4 @@
-package com.taobao.paysecurity;
+package com.taobao.travel;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.alipay.sdk.app.PayTask;
 
 import java.io.UnsupportedEncodingException;
-import java.net.URISyntaxException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 

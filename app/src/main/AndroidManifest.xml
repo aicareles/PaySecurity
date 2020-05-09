@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.taobao.paysecurity">
+    package="com.taobao.travel">
 
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -15,7 +15,7 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity1">
+        <activity android:name="com.taobao.travel.MainActivity1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

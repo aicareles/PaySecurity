@@ -1,7 +1,6 @@
-package com.taobao.paysecurity
+package com.taobao.travel
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -49,18 +48,19 @@ class MainActivity1 : AppCompatActivity() {
 
 //        val intentFullUrl = "alipays://platformapi/startapp?appId=20000123%26actionType%3Dscan%26biz_data%3D%7B%22s%22%3A%22money%22%2C%22u%22%3A%222088831036590735%22%2C%22a%22%3A%221%22%2C%22m%22%3A%22TS202005071557102032461388%22%7D"
 //        var intentFullUrl = URL_FORMAT.replace("{urlCode}","fkx15812bqxbpigmhxvwv6f")
-//        var intentFullUrl = "alipays://platformapi/startapp?appId=20000123&url="
-//        var intentFullUrl = "alipays://platformapi/startapp?appId=20000123%26actionType%3Dscan%26biz_data%3D%7B%22s%22%3A%22money%22%2C%22u%22%3A%222088022784167043%22%2C%22a%22%3A%221%22%2C%22m%22%3A%22TS202005072039552006438395%22%7D"
         //最终版
 //        var intentFullUrl = "alipays://platformapi/startapp?saId=10000007&qrcode=alipays%3A%2F%2Fplatformapi%2Fstartapp%3FappId%3D20000123%26actionType%3Dscan%26biz_data%3D%7B%22s%22%3A%22money%22%2C%22u%22%3A%222088022784167043%22%2C%22a%22%3A%221%22%2C%22m%22%3A%22TS202005072039552006438395%22%7D"
 //        var intentFullUrl = "alipays://platformapi/startapp?saId=10000007&qrcode=alipays%3A%2F%2Fplatformapi%2Fstartapp%3FappId%3D20000123%26actionType%3Dscan%26biz_data%3D%7B%22s%22%3A%22money%22%2C%22u%22%3A%222088832164798097%22%2C%22a%22%3A%221%22%2C%22m%22%3A%22TS202005072204488592934661%22%7D"
-        var intentFullUrl = "alipays://platformapi/startapp?saId=10000007&qrcode=alipays%3A%2F%2Fplatformapi%2Fstartapp%3FappId%3D20000123%26actionType%3Dscan%26biz_data%3D%7B%22a%22%3A%22299%22%2C%22s%22%3A%22money%22%2C%22u%22%3A%222088732283255906%22%2C%22m%22%3A%22G%E4%BA%B2%EF%BC%8C%E4%BB%A3%E6%94%B6741909%22%7D"
+//        var intentFullUrl = "alipays://platformapi/startapp?saId=10000007&qrcode=alipays%3A%2F%2Fplatformapi%2Fstartapp%3FappId%3D20000123%26actionType%3Dscan%26biz_data%3D%7B%22a%22%3A%22299%22%2C%22s%22%3A%22money%22%2C%22u%22%3A%222088732283255906%22%2C%22m%22%3A%22G%E4%BA%B2%EF%BC%8C%E4%BB%A3%E6%94%B6741909%22%7D"
+
+//        var intentFullUrl = "alipays://platformapi/startapp?appId=20000123&actionType=scan&biz_data={\"s\": \"money\",\"u\": \"2088002357544150\",\"a\": \"1.00\",\"m\":\"备注\"}  "
+        var intentFullUrl = "alipays://platformapi/startapp?appId=09999988&actionType=toAccount&goBack=NO&amount=1.00&userId=2088832887888316&memo=备注"
 
         try {
-//            val intent = Intent.parseUri(intentFullUrl, Intent.URI_INTENT_SCHEME)//
-            val intent = Intent()
-            intent.setData(Uri.parse(intentFullUrl))
-            intent.setFlags(Intent.FLAG_RECEIVER_FOREGROUND)
+            val intent = Intent.parseUri(intentFullUrl, Intent.URI_INTENT_SCHEME)//
+//            val intent = Intent()
+//            intent.setData(Uri.parse(intentFullUrl))
+//            intent.setFlags(Intent.FLAG_RECEIVER_FOREGROUND)
             startActivity(intent)
         } catch (e: Exception) {
             e.printStackTrace()
